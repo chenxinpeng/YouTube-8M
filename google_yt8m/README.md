@@ -7,9 +7,16 @@ And at the same time, I use this README.md to record some operations when I use 
 
 ## Operation records
 ### LogisticModel
+Training with LogisticModel:
+```bash
+$ CUDA_VISIBLE_DEVICES=0 python train.py --train_data_pattern="../data/video_level/train_feats/train*.tfrecord" --train_dir=./models/video_level_mymodel_1 --feature_names="mean_rgb, mean_audio" --feature_sizes="1024, 128" --model=MyModel_1
+```
 
 ### MoeModel
 Training with MoeModel:
+```bash
+$ CUDA_VISIBLE_DEVICES=0 python train.py --train_data_pattern="../data/video_level/train_feats/train*.tfrecord" --train_dir=./models/video_level_moe --feature_names="mean_rgb, mean_audio" --feature_sizes="1024, 128" --model=MoeModel
+```
 
 Evaluation on MoeModel:
 ```bash
